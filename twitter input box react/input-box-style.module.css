@@ -1,0 +1,92 @@
+.inputBox{
+    position: relative;
+    display: flex;
+    border: 2px solid white;
+    flex-direction: column;
+    width: 400px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    background-color: transparent;
+    height: 70px;
+    cursor: text;
+    margin-bottom: 5vh;
+}
+.inputBox:hover{
+    cursor:text;
+}
+.inputBox.active{
+    border: 3px solid burlywood;
+}
+.label{
+    font-size: x-large;
+    padding-left: 10px;
+    text-align: left;
+    cursor: text;
+    color: white;
+    transform: translateY(50%);
+    transition: all 0.1s ease;
+}
+.label.active{
+    color: burlywood;
+    font-size: larger;
+    transform: translateY(0);
+}
+.label.inactive{
+    color: gray;
+    font-size: larger;
+    transform: translateY(0);
+}
+.inputBox input{
+    padding-left: 10px;
+    font-size: x-large;
+    outline: none;
+    border: none;
+    height: 65%;
+    color: white;
+    background-color: transparent;
+}
+.inputBox input:focus{
+    color: burlywood;
+    
+}
+@media screen and (max-width:500px) {
+    .inputBox{
+        max-width: 250px;
+        max-height: 50px;
+        height: 10%;
+    }
+    .label{
+        font-size: large;
+    }
+    .label.active{
+        font-size: medium;
+    }
+    .inputBox input{
+        font-size: large;
+    }
+    .label.inactive{
+        font-size: medium;
+    }
+
+}
+@media screen and (max-width:380px) {
+    .inputBox{
+        max-width: 250px;
+        max-height: 50px;
+        height: 10%;
+    }
+    .label{
+        font-size: medium;
+    }
+    .label.active{
+        font-size: small;
+    }
+    .inputBox input{
+        font-size: medium;
+    }
+    .label.inactive{
+        font-size: small;
+    }
+}
+
+
