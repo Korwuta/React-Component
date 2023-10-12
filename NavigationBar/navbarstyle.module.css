@@ -1,0 +1,177 @@
+.navbar{
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    height: 8vh;
+    align-items: center;
+    z-index: 3;
+}
+.navbar ul{
+    list-style: none;
+    display: flex;
+}
+.navbar img{
+    height: 4vh;
+    width: max-content;
+}
+.navbar button{
+    background-color: burlywood;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    border-radius: 15px;
+    font-size: 30px;
+}
+.close{
+    display: none;
+    height: fit-content;
+}
+.navbar button:hover{
+    background-color: rgba(222,184,135,0.8);
+}
+.linkInactive{
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 15px;
+    font-weight: bold;
+    transition: color 0.8s ease;
+}
+.linkInactive:hover{
+    color: burlywood;
+    background-color: rbga(255,255,255,0.8);
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+.linkActive{
+    color: burlywood;
+    text-decoration: none;
+    padding: 15px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.cover::before{
+    z-index: -1;
+    content: "";
+    position: fixed;
+    left:0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.2);
+}
+.sidebar{
+    z-index: 2;
+    list-style: none;
+    position: fixed;
+    padding-top: 4vh;
+    right: -100%;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    width: 85%;
+    max-width: 400px;
+    gap: 6vh;
+    transition: all 0.5s ease;
+}
+
+.sidebar ul{
+    list-style: none;
+    width: 100%;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid gray;
+}
+.sidebar button{
+    background-color: burlywood;
+    color: white;
+    padding: 10px 0px 10px 0px;
+    border-radius: 15px;
+    font-size: 25px;
+    width: 90%;
+}
+.sidebarLinkInactive{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    padding: 15px;
+    transition: color 0.8s ease;
+}
+.sidebarLinkInactive:hover{
+    color: burlywood;
+    background-color: rbga(255,255,255,0.8);
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+.sidebarLinkActive{
+    color: burlywood;
+    text-decoration: none;
+    padding: 15px;
+    font-size: 25px;
+}
+.sidebar li{
+    border-top: 1px solid grey;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.sidebar.open{
+    right: 0;
+}
+.sidebarDiv{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+.sidebarLogo{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    height: 7vh;
+    width: max-content;
+    justify-self: center;
+    align-self: center;
+}
+.sidebarCloseToggle{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    height: 3vh;
+    width: max-content;
+    justify-self: center;
+    align-self: center;
+    margin-right: 0 auto;
+}
+@media screen and (max-width:1250px) {
+    .navbar ul{
+        display: none;
+    }
+    .navbar button{
+        display: none;
+    }
+    .close{
+        display: block;
+    }
+}
+@media screen and (max-width:500px) {
+    .navbar{
+        height: 6vh;
+    }
+    .navbar img{
+        height: 3vh;
+        width: max-content;
+    }
+    .sidebarLinkInactive{
+        font-size: 15px;
+    }
+    .sidebarLinkActive{
+        
+        font-size: 15px;
+    }
+    .sidebar button{
+        
+        font-size: 15px;
+    }
+}
